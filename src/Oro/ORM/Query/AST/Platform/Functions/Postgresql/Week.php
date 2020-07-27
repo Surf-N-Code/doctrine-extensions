@@ -15,6 +15,6 @@ class Week extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(WEEK FROM TIMESTAMP' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(WEEK FROM TIMESTAMP ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }

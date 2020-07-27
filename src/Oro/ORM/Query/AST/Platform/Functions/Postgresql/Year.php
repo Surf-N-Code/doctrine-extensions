@@ -15,6 +15,6 @@ class Year extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(YEAR FROM TIMESTAMP' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(YEAR FROM TIMESTAMP ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }

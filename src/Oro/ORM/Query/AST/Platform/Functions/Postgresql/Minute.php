@@ -15,6 +15,6 @@ class Minute extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(MINUTE FROM ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(MINUTE FROM TIMESTAMP ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }

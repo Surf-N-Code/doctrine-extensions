@@ -15,6 +15,6 @@ class Month extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(MONTH FROM ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(MONTH FROM TIMESTAMP ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }

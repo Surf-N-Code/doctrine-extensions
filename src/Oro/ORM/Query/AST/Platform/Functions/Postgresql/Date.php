@@ -16,6 +16,6 @@ class Date extends PlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'DATE(TIMESTAMP' . $this->getExpressionValue($expression, $sqlWalker) . ')';
+        return 'DATE(TIMESTAMP ' . $this->getExpressionValue($expression, $sqlWalker) . ')';
     }
 }

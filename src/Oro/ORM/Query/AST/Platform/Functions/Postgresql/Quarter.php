@@ -15,6 +15,6 @@ class Quarter extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(QUARTER FROM ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(QUARTER FROM TIMESTAMP ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }
