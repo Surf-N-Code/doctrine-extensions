@@ -15,6 +15,6 @@ class Dayofweek extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(DOW FROM ' . $this->getTimestampValue($expression, $sqlWalker) . ') + 1';
+        return 'EXTRACT(DOW FROM TIMESTAMP' . $this->getTimestampValue($expression, $sqlWalker) . ') + 1';
     }
 }

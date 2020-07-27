@@ -49,7 +49,7 @@ class Timestampdiff extends AbstractTimestampAwarePlatformFunctionNode
     protected function getDiffForMicrosecond(Node $firstDateNode, Node $secondDateNode, SqlWalker $sqlWalker)
     {
         return sprintf(
-            'EXTRACT(MICROSECOND FROM %s - %s)',
+            'EXTRACT(MICROSECOND FROM TIMESTAMP %s - TIMESTAMP %s)',
             $this->getTimestampValue($secondDateNode, $sqlWalker),
             $this->getTimestampValue($firstDateNode, $sqlWalker)
         );

@@ -15,6 +15,6 @@ class Dayofyear extends AbstractTimestampAwarePlatformFunctionNode
     {
         /** @var Node $expression */
         $expression = $this->parameters[SimpleFunction::PARAMETER_KEY];
-        return 'EXTRACT(DOY FROM ' . $this->getTimestampValue($expression, $sqlWalker) . ')';
+        return 'EXTRACT(DOY FROM TIMESTAMP' . $this->getTimestampValue($expression, $sqlWalker) . ')';
     }
 }
